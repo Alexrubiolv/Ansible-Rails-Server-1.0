@@ -1,0 +1,9 @@
+---
+- name: Apply presetup to Server
+  hosts: all
+  remote_user: root
+  gather_facts: no
+  vars:
+    ssh_key_path: /path/to/.ssh/key.pub
+  roles:
+    - presetup
